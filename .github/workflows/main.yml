@@ -10,7 +10,8 @@ on:
   push:
   schedule:
     - cron: '0 27 * * *'
-
+  schedule:
+    - cron: '0 28 * * *'
 jobs:
   build:
     # Ubuntuの最新版環境内で処理を実行することを指定
