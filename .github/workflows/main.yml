@@ -20,10 +20,10 @@ jobs:
     steps:
       # リポジトリからチェックアウトして以下の処理を実行していく
       - uses: actions/checkout@v2
-      - name: Set up Python 3.8
+      - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: 3.7
       - name: Install dependencies
         run: |
           # pip更新
