@@ -9,7 +9,7 @@ name: test_chatbot
 on:
   push:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 27 * * *'
 
 jobs:
   build:
