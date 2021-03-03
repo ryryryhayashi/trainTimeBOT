@@ -20,14 +20,14 @@ jobs:
     steps:
       # リポジトリからチェックアウトして以下の処理を実行していく
       - uses: actions/checkout@v2
-      - name: Set up Python 3.7
+      - name: Set up Python 3.9
         uses: actions/setup-python@v1
         with:
-          python-version: 3.7
+          python-version: 3.9
       - name: Install dependencies
         run: |
           # pip更新
-          python -m pip install --upgrade pip
+          python -m pip3 install --upgrade pip
           # 必要なパッケージインストール
           pip install line-bot-sdk
       - name: Run script
