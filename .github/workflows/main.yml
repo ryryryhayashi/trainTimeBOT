@@ -9,9 +9,8 @@ name: test_chatbot
 on:
   push:
   schedule:
-    - cron: '0 16 * * *'
-  schedule:
     - cron: '0 17 * * *'
+
 jobs:
   build:
     # Ubuntuの最新版環境内で処理を実行することを指定
