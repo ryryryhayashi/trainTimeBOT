@@ -1,6 +1,5 @@
 import json
 import requests
-import datetime
 from bs4 import BeautifulSoup
 import urllib.request as req
 file = open('info.json', 'r') #jsonファイルの読み込み(json形式ではない)
