@@ -10,10 +10,9 @@ from linebot import LineBotApi #LineBot作成用
 from linebot.models import TextSendMessage
 CHANNEL_ACCES_TOKEN = info['CHANNEL_ACCES_TOKEN'] #トークンを変数で定義
 line_bot_api = LineBotApi(CHANNEL_ACCES_TOKEN) #インスタンス化
-def getTrain():
+def getTrain(URL):
     # 運行状況を取得する
-    url = "https://trafficinfo.westjr.co.jp/sp/chugoku.html"
-    response = req.urlopen(url)
+    response = req.urlopen(URL)
     parse_html = BeautifulSoup(response, 'html.parser')
     ul_lists=parse_html.find_all(class_="unko_status")
     ul_list=[]
@@ -24,7 +23,7 @@ def getTrain():
 def main():
     USER_ID = info['USER_ID'] #IDを変数に代入
     url = "https://trafficinfo.westjr.co.jp/sp/chugoku.html"
-    trainTime = getTrain()
+    trainTime = getTrain(URL)
     messages = TextSendMessage(text='【～山陰本線の運行状況～】\n\n' + trainTime + url)
     line_bot_api.push_message(USER_ID, messages=messages) #メッセージ送信
 
