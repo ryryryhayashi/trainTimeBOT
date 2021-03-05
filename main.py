@@ -23,7 +23,7 @@ def getTrain(URL):
 def main():
     USER_ID = info['USER_ID'] #IDを変数に代入
     url = "https://trafficinfo.westjr.co.jp/sp/chugoku.html"
-    trainTime = getTrain(URL)
+    trainTime = getTrain(url)
     messages = TextSendMessage(text='【～山陰本線の運行状況～】\n\n' + trainTime + url)
     line_bot_api.push_message(USER_ID, messages=messages) #メッセージ送信
 
