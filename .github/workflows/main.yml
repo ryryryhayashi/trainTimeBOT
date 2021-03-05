@@ -11,7 +11,7 @@ on:
   schedule:
     - cron: '50 22 * * 1-5'
     - cron: '0 6 * * 1-5'
-    - cron: '13 * * * *'
+    - cron: '20 * * * *'
     
 jobs:
   build:
